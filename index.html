@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>منصة نلتقي لنرتقي | الشيخ سيد الجندي</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>نلتقي لنرتقي</h1>
+                <span>الشيخ سيد الجندي</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">الرئيسية</a></li>
+                    <li><a href="#courses">الدورات العلمية</a></li>
+                    <li><a href="#">عن الشيخ</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h2>مرحباً بكم في منصتنا التعليمية</h2>
+            <p>نهدف إلى نشر العلم الشرعي بأسلوب ميسر ومنهجي</p>
+        </div>
+    </section>
+
+    <main class="container" id="courses">
+        <h2 class="section-title">الكورسات المتاحة</h2>
+        
+        <div class="courses-grid">
+            <div class="course-card" onclick="openCourse('fiqh')">
+                <div class="course-icon"><i class="fas fa-book-open"></i></div>
+                <h3>كورس الفقه</h3>
+                <p>شرح ميسر لأحكام الفقه الإسلامي</p>
+                <button class="btn">عرض الدروس</button>
+            </div>
+
+            <div class="course-card" onclick="openCourse('seerah')">
+                <div class="course-icon"><i class="fas fa-mosque"></i></div>
+                <h3>كورس السيرة النبوية</h3>
+                <p>دراسة في حياة النبي صلى الله عليه وسلم</p>
+                <button class="btn">عرض الدروس</button>
+            </div>
+
+            <div class="course-card" onclick="openCourse('aqidah')">
+                <div class="course-icon"><i class="fas fa-heart"></i></div>
+                <h3>كورس العقيدة</h3>
+                <p>ترسيخ مفاهيم الإيمان والتوحيد</p>
+                <button class="btn">عرض الدروس</button>
+            </div>
+        </div>
+    </main>
+
+    <div id="videoModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2 id="modalTitle">اسم الكورس</h2>
+            <div class="player-container">
+                <div class="video-display">
+                    <iframe id="mainVideo" src="" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class="playlist">
+                    <ul id="lessonList">
+                        </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>جميع الحقوق محفوظة لمنصة نلتقي لنرتقي &copy; 2026</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
