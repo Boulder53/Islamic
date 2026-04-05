@@ -74,3 +74,8 @@ window.onclick = function(event) {
         closeModal();
     }
 }
+
+
+function toggleSocial() {
+  document.querySelector(".social-float").classList.toggle("active");
+}
