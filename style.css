@@ -178,3 +178,67 @@ footer {
     background: var(--primary-color);
     color: white;
 }
+
+.social-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+  display: flex;
+  flex-direction: column-reverse; /* يجعل الزر تحت والأيقونات فوق */
+  align-items: center;
+}
+
+.social-float .main-btn {
+  width: 55px;
+  height: 55px;
+  background: #333;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.social-float .main-btn:hover {
+  background: #555;
+}
+
+.social-icons {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 10px;
+
+  transform: scale(0);
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.3s ease;
+}
+
+.social-float.active .social-icons {
+  transform: scale(1);
+  opacity: 1;
+  pointer-events: all;
+}
+
+.social-icons a {
+  width: 48px;
+  height: 48px;
+  background: #fff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  color: #333;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.social-icons a:hover {
+  transform: scale(1.1);
+}
